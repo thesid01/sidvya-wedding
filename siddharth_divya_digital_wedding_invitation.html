@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddharth Weds Divya | Wedding Invitation — 4th December 2026</title>
+    
+    <!-- =====================================================================
+         WHATSAPP & SOCIAL SHARE PREVIEW TAGS (OpenGraph)
+         Update these slightly if you change the date or add a custom cover photo
+    ====================================================================== -->
+    <meta property="og:title" content="Siddharth Weds Divya — Wedding Invitation ✨">
+    <meta property="og:description" content="Together with our families, we joyfully invite you to celebrate our wedding on Friday, 4th December 2026 at CHARANS CLUB AND RESORT. Tap to view ceremony timings & directions!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/1200x630/6B1224/D4AF37?text=Siddharth+Weds+Divya+%7C+4+Dec+2026">
+    <meta name="theme-color" content="#6B1224">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Tillana (Hindi/Devanagari), Cormorant Garamond (Royal Serif), Great Vibes & Alex Brush (Regal Script), Plus Jakarta Sans (Clean UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: {
+                            DEFAULT: '#FAF6F0',
+                            light: '#FFFDF9',
+                            dark: '#F0E6D6'
+                        },
+                        crimson: {
+                            DEFAULT: '#6B1224',
+                            dark: '#4A0A17',
+                            light: '#8E1D34'
+                        },
+                        gold: {
+                            DEFAULT: '#C59B27',
+                            light: '#E6C762',
+                            pale: '#F3E5AB',
+                            dark: '#9A7414'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+                        script: ['"Great Vibes"', '"Alex Brush"', 'cursive'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        hindi: ['"Tillana"', 'cursive', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF6F0;
+            color: #2D1A1E;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(197, 155, 39, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 85% 75%, rgba(107, 18, 36, 0.06) 0%, transparent 50%);
+        }
+
+        /* Dedicated Hindi / Devanagari Font Utility using Google Font 'Tillana' */
+        .font-hindi {
+            font-family: 'Tillana', cursive, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Subtle Mandala Background Watermark */
+        .mandala-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C59B27' stroke-width='0.6' stroke-opacity='0.18'%3E%3Ccircle cx='60' cy='60' r='48'/%3E%3Ccircle cx='60' cy='60' r='36' stroke-dasharray='3 3'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3Cpath d='M60 12 C68 35 85 52 108 60 C85 68 68 85 60 108 C52 85 35 68 12 60 C35 52 52 35 60 12 Z'/%3E%3Cpath d='M26 26 C45 40 75 40 94 26 C80 45 80 75 94 94 C75 80 45 80 26 94 C40 75 40 45 26 26 Z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Royal Gold Shimmer Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #9A7414 0%, #D4AF37 35%, #AA7C11 65%, #E6C762 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Ornate Card Frame */
+        .royal-card {
+            background: rgba(255, 253, 249, 0.94);
+            border: 1px solid rgba(197, 155, 39, 0.35);
+            box-shadow: 0 12px 32px -8px rgba(107, 18, 36, 0.08), 0 0 0 4px rgba(255, 253, 249, 0.6) inset;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+        }
+        .royal-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(107, 18, 36, 0.14), 0 0 0 1px rgba(197, 155, 39, 0.6) inset;
+        }
+
+        /* Floating Petals Canvas */
+        #petal-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Slow spin for decorative mandala */
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 55s linear infinite;
+        }
+
+        /* Equalizer bars for ambient music button */
+        @keyframes eq-bar {
+            0%, 100% { height: 4px; }
+            50% { height: 16px; }
+        }
+        .eq-playing span:nth-child(1) { animation: eq-bar 0.8s ease-in-out infinite; }
+        .eq-playing span:nth-child(2) { animation: eq-bar 0.6s ease-in-out 0.2s infinite; }
+        .eq-playing span:nth-child(3) { animation: eq-bar 0.9s ease-in-out 0.4s infinite; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FAF6F0; }
+        ::-webkit-scrollbar-thumb { background: #C59B27; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6B1224; }
+    </style>
+</head>
+<body class="mandala-bg antialiased selection:bg-crimson selection:text-ivory-light">
+
+    <!-- Subtle Floating Marigold/Rose Gold Petals Canvas -->
+    <canvas id="petal-canvas"></canvas>
+
+    <!-- =====================================================================
+         TOP STICKY NAVIGATION BAR
+    ====================================================================== -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-ivory-light/90 backdrop-blur-md border-b border-gold/25 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-2.5 group">
+                <span class="w-9 h-9 rounded-full bg-crimson text-gold-light font-serif font-bold text-sm flex items-center justify-center border border-gold/50 shadow-sm group-hover:scale-105 transition">
+                    S&amp;D
+                </span>
+                <span class="font-script text-2xl sm:text-3xl text-crimson hidden sm:inline pt-1">
+                    Siddharth Weds Divya
+                </span>
+            </a>
+
+            <nav class="flex items-center gap-4 sm:gap-7 text-xs sm:text-sm font-medium text-crimson/85">
+                <a href="#countdown-section" class="hover:text-crimson transition">Countdown</a>
+                <a href="#moments-section" class="hover:text-crimson transition">Photos</a>
+                <a href="#events-section" class="hover:text-crimson transition">Ceremonies</a>
+                <a href="#venue-section" class="hover:text-crimson transition hidden sm:inline">Venue</a>
+                <a href="https://maps.app.goo.gl/4KtfPdzznq7EtVG68" target="_blank" rel="noopener noreferrer"
+                    class="px-3.5 py-1.5 rounded-full bg-crimson text-ivory-light hover:bg-crimson-dark transition shadow-sm font-medium flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-gold-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>Directions</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         FLOATING CONTROLS (Ambient Chime Player + Share + GitHub Help)
+    ====================================================================== -->
+    <!-- Bottom Right: Ambient Shehnai/Harp Chimes Toggle & Quick Share -->
+    <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2.5">
+        <button id="music-toggle-btn" onclick="toggleAmbientMusic()" title="Play auspicious ambient melody"
+            class="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-ivory-light/95 text-crimson border border-gold/60 shadow-lg hover:shadow-xl hover:scale-105 transition-all text-xs font-medium">
+            <div id="music-bars" class="flex items-end gap-0.5 h-4">
+                <span class="w-0.5 h-1.5 bg-crimson rounded-full transition-all"></span>
+                <span class="w-0.5 h-2.5 bg-gold-dark rounded-full transition-all"></span>
+                <span class="w-0.5 h-1 bg-crimson rounded-full transition-all"></span>
+            </div>
+            <span id="music-label">Play Melody</span>
+        </button>
+
+        <button onclick="shareInvitation()" title="Share on WhatsApp"
+            class="flex items-center gap-2 px-4 py-2.5 rounded-full bg-crimson text-ivory-light border border-gold/50 shadow-lg hover:bg-crimson-dark hover:scale-105 transition-all text-xs font-medium">
+            <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+            </svg>
+            <span>Share Invite</span>
+        </button>
+    </div>
+
+    <!-- Bottom Left: GitHub Pages Setup Guide Button (Can be dismissed or hidden in config) -->
+    <div id="github-helper-pill" class="fixed bottom-5 left-5 z-40">
+        <div class="flex items-center bg-ivory-light/95 border border-gold/60 rounded-full shadow-lg overflow-hidden text-xs">
+            <button onclick="openGithubModal()" class="px-3.5 py-2.5 text-crimson font-medium hover:bg-gold/10 transition flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-crimson" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <span>Host on GitHub (Admin Guide)</span>
+            </button>
+            <button onclick="dismissGithubPill()" title="Hide this helper button" class="px-2.5 py-2.5 text-crimson/50 hover:text-crimson hover:bg-crimson/5 border-l border-gold/30 transition">
+                ✕
+            </button>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         HERO SECTION
+    ====================================================================== -->
+    <section id="hero" class="relative min-h-screen pt-24 pb-16 px-4 sm:px-6 flex flex-col items-center justify-center overflow-hidden">
+        
+        <!-- Decorative Rotating Mandala Behind Arch -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] sm:w-[680px] sm:h-[680px] pointer-events-none opacity-15">
+            <svg viewBox="0 0 200 200" class="w-full h-full animate-spin-slow text-gold-dark">
+                <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 4"/>
+                <circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="0.6"/>
+                <circle cx="100" cy="100" r="62" fill="none" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 2"/>
+                <g stroke="currentColor" stroke-width="0.7" fill="none">
+                    <path d="M100 8 C115 45 155 85 192 100 C155 115 115 155 100 192 C85 155 45 115 8 100 C45 85 85 45 100 8 Z"/>
+                    <path d="M35 35 C70 55 130 55 165 35 C145 70 145 130 165 165 C130 145 70 145 35 165 C55 130 55 70 35 35 Z"/>
+                </g>
+            </svg>
+        </div>
+
+        <!-- Main Royal Arch Invitation Frame -->
+        <div class="relative z-20 max-w-3xl w-full royal-card rounded-t-[180px] sm:rounded-t-[240px] rounded-b-3xl p-6 sm:p-12 md:p-16 text-center border-2 border-gold/40">
+            
+            <!-- Ornamental Corner Flourishes -->
+            <svg class="w-12 h-12 text-gold/70 absolute bottom-3 left-3 pointer-events-none" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 44 L4 60 L20 60 M4 60 C20 60 32 48 32 32"/>
+                <circle cx="12" cy="52" r="2" fill="currentColor"/>
+            </svg>
+            <svg class="w-12 h-12 text-gold/70 absolute bottom-3 right-3 pointer-events-none scale-x-[-1]" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 44 L4 60 L20 60 M4 60 C20 60 32 48 32 32"/>
+                <circle cx="12" cy="52" r="2" fill="currentColor"/>
+            </svg>
+
+            <!-- Auspicious Sanskrit Invocation & Diya / Kalash Motif -->
+            <div class="flex flex-col items-center mb-5">
+                <div class="w-12 h-12 rounded-full bg-crimson/5 border border-gold/40 flex items-center justify-center mb-2.5 text-crimson">
+                    <!-- Auspicious Lotus / Diya SVG -->
+                    <svg class="w-7 h-7 text-gold-dark" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 4C16 4 12 10 12 14C12 16.2 13.8 18 16 18C18.2 18 20 16.2 20 14C20 10 16 4 16 4ZM8 14C8 14 5 17 6 21C7 24 11 25 14 25.5C11 23 10 19 8 14ZM24 14C22 19 21 23 18 25.5C21 25 25 24 26 21C27 17 24 14 24 14ZM6 26C10 28.5 22 28.5 26 26C23 26 9 26 6 26Z"/>
+                    </svg>
+                </div>
+                <p id="hero-invocation" class="font-hindi text-lg sm:text-2xl font-bold text-crimson tracking-wide">
+                    ॥ श्री गणेशाय नमः ॥
+                </p>
+                <span id="hero-hindi-subtitle" class="font-hindi text-sm sm:text-base font-semibold text-gold-dark mt-0.5">
+                    ✨ शुभ विवाह समारोह • मंगल परिणय ✨
+                </span>
+            </div>
+
+            <!-- Family Invitation Line -->
+            <p id="hero-Blessing" class="font-serif italic text-lg sm:text-xl text-crimson/80 max-w-xl mx-auto mb-6">
+                Together with their families, joyfully invite you to celebrate the auspicious wedding of
+            </p>
+
+            <!-- Regal Hero Couple Portrait Medallion -->
+            <div class="relative mx-auto mb-6 w-36 h-44 sm:w-44 sm:h-56 rounded-t-full rounded-b-3xl p-1.5 bg-gradient-to-b from-gold-light via-gold to-crimson shadow-xl group cursor-pointer"
+                 onclick="openPhotoLightbox(0)" title="Click to view full portrait">
+                <div class="w-full h-full rounded-t-full rounded-b-[20px] overflow-hidden bg-crimson-dark relative">
+                    <img id="hero-couple-photo" src="image_3a9cfa.jpg" alt="Siddharth & Divya"
+                         onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='https://placehold.co/600x800/3D0C17/E6C762?text=Siddharth+%26+Divya%0A(image_3a9cfa.jpg)';}"
+                         class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-crimson-dark/50 via-transparent to-transparent"></div>
+                </div>
+                <span class="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-crimson text-gold-pale border border-gold text-[11px] font-hindi font-semibold tracking-wider shadow whitespace-nowrap">
+                    सिद्धार्थ संग दिव्या
+                </span>
+            </div>
+
+            <!-- Couple Names: Siddharth Weds Divya in Regal Calligraphy Font -->
+            <div class="my-6 sm:my-10">
+                <h1 class="font-script text-6xl sm:text-8xl md:text-9xl text-crimson leading-tight drop-shadow-sm py-1">
+                    <span id="groom-name-hero">Siddharth</span>
+                </h1>
+                
+                <div class="flex items-center justify-center gap-4 my-2 sm:my-3">
+                    <span class="h-px w-14 sm:w-24 bg-gradient-to-r from-transparent to-gold"></span>
+                    <span class="font-script text-4xl sm:text-5xl gold-gradient-text px-3">Weds</span>
+                    <span class="h-px w-14 sm:w-24 bg-gradient-to-l from-transparent to-gold"></span>
+                </div>
+
+                <h1 class="font-script text-6xl sm:text-8xl md:text-9xl text-crimson leading-tight drop-shadow-sm py-1">
+                    <span id="bride-name-hero">Divya</span>
+                </h1>
+
+                <!-- Stylish #sidvya Hashtag Badge -->
+                <div class="mt-5 flex items-center justify-center">
+                    <button type="button" onclick="copyHashtag()" title="Tap to copy wedding hashtag"
+                        class="group inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/15 hover:bg-gold/25 border border-gold/50 text-crimson text-xs sm:text-sm font-medium transition shadow-sm">
+                        <span class="text-gold-dark">✨</span>
+                        <span id="hero-hashtag-badge" class="font-serif font-bold tracking-wider text-base text-crimson">#sidvya</span>
+                        <span class="text-[11px] text-crimson/60 group-hover:text-crimson transition">(Tap to copy)</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Parents / Family Subtext -->
+            <p id="family-line-hero" class="text-xs sm:text-sm text-crimson/75 max-w-lg mx-auto leading-relaxed mb-8">
+                Seek your blessings and gracious presence as we unite in marriage and begin our forever journey together.
+            </p>
+
+            <!-- Date & Venue Highlight Pill -->
+            <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 px-6 py-4 rounded-2xl bg-crimson text-ivory-light border border-gold shadow-md mb-8">
+                <div class="flex items-center gap-2.5">
+                    <svg class="w-5 h-5 text-gold-light shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    <span id="hero-date-display" class="font-serif font-semibold text-lg sm:text-xl tracking-wide text-gold-pale">
+                        Friday, 4th December 2026 • 8:00 PM
+                    </span>
+                </div>
+                <span class="hidden sm:inline text-gold/60">•</span>
+                <a id="hero-venue-link" href="https://maps.app.goo.gl/4KtfPdzznq7EtVG68" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 hover:text-gold-light transition underline decoration-gold/50 underline-offset-4">
+                    <svg class="w-5 h-5 text-gold-light shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span id="hero-city-display" class="text-sm sm:text-base font-semibold text-ivory tracking-wide">
+                        CHARANS CLUB AND RESORT
+                    </span>
+                </a>
+            </div>
+
+            <!-- Action Buttons: Get Directions, Save to Calendar & Share -->
+            <div class="flex flex-wrap items-center justify-center gap-3.5">
+                <a id="hero-directions-btn" href="https://maps.app.goo.gl/4KtfPdzznq7EtVG68" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-crimson hover:bg-crimson-dark text-ivory-light border border-gold font-medium text-sm transition shadow-md">
+                    <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>Get Directions on Google Maps</span>
+                </a>
+
+                <a id="google-cal-btn" href="#" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gold/15 hover:bg-gold/25 text-crimson border border-gold/60 font-medium text-sm transition shadow-sm">
+                    <svg class="w-4 h-4 text-crimson" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+                    </svg>
+                    <span>Add to Google Calendar</span>
+                </a>
+
+                <button onclick="downloadICSFile()"
+                    class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-ivory hover:bg-ivory-dark text-crimson border border-gold/50 font-medium text-sm transition shadow-sm">
+                    <svg class="w-4 h-4 text-gold-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                    </svg>
+                    <span>Save .ICS Invite</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         LIVE COUNTDOWN SECTION
+    ====================================================================== -->
+    <section id="countdown-section" class="py-12 px-4 sm:px-6 relative z-20">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-xs uppercase tracking-[0.25em] text-gold-dark font-semibold mb-2">Counting Down To Our Forever</p>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-crimson mb-8">The Auspicious Muhurat Awaits</h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto">
+                <!-- Days -->
+                <div class="royal-card rounded-2xl p-5 border border-gold/40">
+                    <div id="cd-days" class="font-serif font-bold text-4xl sm:text-5xl text-crimson">00</div>
+                    <div class="text-xs uppercase tracking-widest text-gold-dark font-semibold mt-1">Days</div>
+                </div>
+                <!-- Hours -->
+                <div class="royal-card rounded-2xl p-5 border border-gold/40">
+                    <div id="cd-hours" class="font-serif font-bold text-4xl sm:text-5xl text-crimson">00</div>
+                    <div class="text-xs uppercase tracking-widest text-gold-dark font-semibold mt-1">Hours</div>
+                </div>
+                <!-- Minutes -->
+                <div class="royal-card rounded-2xl p-5 border border-gold/40">
+                    <div id="cd-mins" class="font-serif font-bold text-4xl sm:text-5xl text-crimson">00</div>
+                    <div class="text-xs uppercase tracking-widest text-gold-dark font-semibold mt-1">Minutes</div>
+                </div>
+                <!-- Seconds -->
+                <div class="royal-card rounded-2xl p-5 border border-gold/40">
+                    <div id="cd-secs" class="font-serif font-bold text-4xl sm:text-5xl text-crimson">00</div>
+                    <div class="text-xs uppercase tracking-widest text-gold-dark font-semibold mt-1">Seconds</div>
+                </div>
+            </div>
+
+            <p id="countdown-status-msg" class="mt-5 font-serif italic text-base text-crimson/80">
+                Join us with your warmest smiles, dancing shoes, and heartfelt blessings!
+            </p>
+        </div>
+    </section>
+
+    <!-- Ornamental Section Divider -->
+    <div class="flex items-center justify-center py-6 px-4">
+        <span class="h-px w-24 sm:w-40 bg-gradient-to-r from-transparent to-gold/60"></span>
+        <svg class="w-7 h-7 mx-4 text-gold-dark" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+        </svg>
+        <span class="h-px w-24 sm:w-40 bg-gradient-to-l from-transparent to-gold/60"></span>
+    </div>
+
+    <!-- =====================================================================
+         COUPLE PORTRAIT GALLERY / ROYAL MOMENTS SECTION
+    ====================================================================== -->
+    <section id="moments-section" class="py-12 px-4 sm:px-6 relative z-20">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <p class="font-hindi text-lg sm:text-xl text-gold-dark font-bold mb-1">॥ स्नेहिल पल • मधुर मिलन ॥</p>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-crimson mb-2">Captured Moments</h2>
+                <p class="font-serif italic text-base sm:text-lg text-crimson/80">
+                    A glimpse of our forever — <span class="font-semibold text-crimson">#sidvya</span>
+                </p>
+            </div>
+
+            <!-- Two Regal Gold-Framed Portrait Cards -->
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Populated dynamically from WEDDING_CONFIG.photos -->
+            </div>
+
+            <!-- Interactive Local Photo Preview Bar (Helpful while testing before GitHub upload) -->
+            <div id="photo-preview-helper" class="mt-8 max-w-2xl mx-auto text-center">
+                <div class="inline-flex flex-wrap items-center justify-center gap-3 px-5 py-3 rounded-2xl bg-gold/10 border border-gold/40 text-xs text-crimson/85">
+                    <span>📸 <strong>GitHub Note:</strong> Place <code class="px-1.5 py-0.5 bg-ivory rounded font-mono text-crimson">image_3a9cfa.jpg</code> &amp; <code class="px-1.5 py-0.5 bg-ivory rounded font-mono text-crimson">image_3a9cf6.jpg</code> in the same folder as <code class="px-1.5 py-0.5 bg-ivory rounded font-mono text-crimson">index.html</code>.</span>
+                    <label class="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-crimson text-ivory-light hover:bg-crimson-dark transition font-medium shadow-sm">
+                        <svg class="w-3.5 h-3.5 text-gold-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <span>Load Photos to Preview Here</span>
+                        <input type="file" accept="image/*" multiple class="hidden" onchange="previewLocalPhotos(event)">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ornamental Section Divider -->
+    <div class="flex items-center justify-center py-6 px-4">
+        <span class="h-px w-24 sm:w-40 bg-gradient-to-r from-transparent to-gold/60"></span>
+        <svg class="w-7 h-7 mx-4 text-gold-dark" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+        </svg>
+        <span class="h-px w-24 sm:w-40 bg-gradient-to-l from-transparent to-gold/60"></span>
+    </div>
+
+    <!-- =====================================================================
+         WEDDING EVENTS / ITINERARY CARDS (HALDI, JAIMALA & SHUBH VIVAH)
+    ====================================================================== -->
+    <section id="events-section" class="py-14 px-4 sm:px-6 relative z-20">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <p class="font-hindi text-lg sm:text-xl text-gold-dark font-bold mb-1">॥ मांगलिक कार्यक्रम ॥</p>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-crimson mb-2">Wedding Ceremonies</h2>
+                <p class="font-hindi text-base sm:text-lg text-crimson/85 font-medium mb-1">
+                    हल्दी, जयमाला एवं शुभ विवाह समारोह
+                </p>
+                <p class="text-sm sm:text-base text-crimson/75">
+                    3rd &amp; 4th December 2026 • Join us in celebrating our sacred traditions and joyous union.
+                </p>
+            </div>
+
+            <!-- Dynamically Populated Event Cards Grid (3 Royal Cards: Haldi, Jaimala, Marriage) -->
+            <div id="events-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                <!-- Populated by JavaScript from WEDDING_CONFIG.events -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         VENUE & LOCATION SECTION (CHARANS CLUB AND RESORT)
+    ====================================================================== -->
+    <section id="venue-section" class="py-12 px-4 sm:px-6 relative z-20">
+        <div class="max-w-5xl mx-auto royal-card rounded-3xl p-6 sm:p-10 md:p-12 border border-gold/40">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-crimson text-xs font-semibold tracking-wider uppercase">
+                            Wedding Venue &amp; Directions
+                        </span>
+                        <span class="font-hindi text-sm font-bold text-gold-dark">
+                            • विवाह स्थल
+                        </span>
+                    </div>
+                    <h3 id="main-venue-title" class="font-serif text-3xl sm:text-4xl font-bold text-crimson tracking-wide">
+                        CHARANS CLUB AND RESORT
+                    </h3>
+                    <p id="main-venue-address" class="text-sm sm:text-base text-crimson/80 leading-relaxed">
+                        Opposite All India Radio, Ayodhya Marg, Matiyari, Chinhat, Lucknow, Uttar Pradesh 226028
+                    </p>
+                    <div class="pt-2 space-y-2.5 text-xs sm:text-sm text-crimson/80">
+                        <p class="flex items-center gap-2.5">
+                            <span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
+                            <span><strong>Haldi (<span class="font-hindi font-semibold text-crimson">हल्दी समारोह</span>):</strong> Thursday, 3rd December 2026 • 9:00 PM onwards</span>
+                        </p>
+                        <p class="flex items-center gap-2.5">
+                            <span class="w-2 h-2 rounded-full bg-gold-dark shrink-0"></span>
+                            <span><strong>Wedding &amp; Jaimala (<span class="font-hindi font-semibold text-crimson">जयमाला एवं शुभ विवाह</span>):</strong> Friday, 4th December 2026 • 8:00 PM onwards</span>
+                        </p>
+                        <p class="flex items-center gap-2.5">
+                            <span class="w-2 h-2 rounded-full bg-gold-dark shrink-0"></span>
+                            <span><strong>Wedding Hashtag:</strong> Capture &amp; tag your memories with <button type="button" onclick="copyHashtag()" id="wedding-hashtag" class="font-bold text-crimson underline decoration-gold hover:text-crimson-light transition">#sidvya</button> (<span class="font-semibold text-crimson">#SidVya</span>)</span>
+                        </p>
+                    </div>
+                    <div class="pt-4 flex flex-wrap gap-3">
+                        <a id="main-venue-map-btn" href="https://maps.app.goo.gl/4KtfPdzznq7EtVG68" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-crimson text-ivory-light hover:bg-crimson-dark text-sm font-medium transition shadow-md">
+                            <svg class="w-4 h-4 text-gold-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+
+                        <button type="button" onclick="shareInvitation()"
+                            class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gold/20 hover:bg-gold/30 text-crimson border border-gold/60 text-sm font-semibold transition">
+                            <svg class="w-4 h-4 text-crimson" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                            </svg>
+                            <span>Share Invite on WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Decorative Royal Crest & Hashtag Showcase Card -->
+                <div class="md:col-span-5 bg-gradient-to-br from-crimson to-crimson-dark text-ivory-light rounded-2xl p-6 sm:p-8 text-center border border-gold shadow-inner relative overflow-hidden">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gold/20 border border-gold flex items-center justify-center">
+                        <span class="font-script text-3xl text-gold-light pt-1">S &amp; D</span>
+                    </div>
+                    <p class="font-hindi text-lg text-gold-light font-semibold mb-1">॥ मंगल परिणय ॥</p>
+                    <p class="font-script text-3xl sm:text-4xl text-gold-pale mb-2">Siddharth Weds Divya</p>
+                    <p class="font-serif italic text-sm sm:text-base text-ivory/90 mb-4">"Two souls with but a single thought, two hearts that beat as one."</p>
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-ivory/10 border border-gold/40 text-gold-light font-serif font-semibold tracking-widest text-sm mb-3">
+                        #sidvya • #SidVya
+                    </div>
+                    <p class="font-hindi text-sm text-gold-pale font-medium mt-1">स्नेहिल निमंत्रण</p>
+                    <p class="text-xs text-ivory/80 mt-0.5">Your gracious presence and blessings are our greatest gift.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         FOOTER
+    ====================================================================== -->
+    <footer class="py-12 px-4 text-center border-t border-gold/30 bg-ivory-dark/50 relative z-20">
+        <p class="font-hindi text-base sm:text-lg text-crimson/85 font-semibold mb-1">॥ सस्नेह निमंत्रण ॥</p>
+        <p class="font-script text-4xl sm:text-5xl gold-gradient-text mb-2 py-1">Siddharth Weds Divya</p>
+        <p id="footer-date-location" class="font-serif text-base sm:text-lg text-crimson/85 mb-2">
+            Friday, 4th December 2026 • CHARANS CLUB AND RESORT
+        </p>
+        <p class="text-xs font-semibold tracking-widest text-gold-dark uppercase mb-4">#sidvya</p>
+        <p class="text-xs text-crimson/60">With warm regards &amp; best compliments from both families</p>
+    </footer>
+
+    <!-- =====================================================================
+         CUSTOM TOAST NOTIFICATION BANNER (No alert() boxes!)
+    ====================================================================== -->
+    <div id="toast-banner" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-[-10px] transition-all duration-300">
+        <div class="px-5 py-3 rounded-full bg-crimson text-ivory-light border border-gold shadow-xl flex items-center gap-2.5 text-xs sm:text-sm font-medium">
+            <span class="w-2 h-2 rounded-full bg-gold-light animate-ping"></span>
+            <span id="toast-message">Copied to clipboard!</span>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         LIGHTBOX MODAL FOR FULL-SCREEN COUPLE PORTRAITS
+    ====================================================================== -->
+    <div id="photo-lightbox" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-crimson-dark/90 backdrop-blur-md" onclick="closePhotoLightbox()">
+        <div class="relative max-w-3xl w-full flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closePhotoLightbox()" class="absolute -top-12 right-0 w-10 h-10 rounded-full bg-ivory/15 text-ivory-light hover:bg-gold hover:text-crimson-dark flex items-center justify-center transition text-lg font-bold border border-gold/50">
+                ✕
+            </button>
+            <div class="p-2 rounded-3xl bg-gradient-to-b from-gold-light via-gold to-crimson shadow-2xl border border-gold">
+                <img id="lightbox-img" src="" alt="Siddharth & Divya Portrait" class="max-h-[78vh] w-auto rounded-2xl object-contain">
+            </div>
+            <div class="mt-4 text-center">
+                <p id="lightbox-hindi" class="font-hindi text-xl text-gold-light font-bold"></p>
+                <p id="lightbox-caption" class="font-serif italic text-base text-ivory/90"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         GITHUB PAGES SETUP GUIDE MODAL (For Siddharth)
+    ====================================================================== -->
+    <div id="github-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-crimson-dark/60 backdrop-blur-sm">
+        <div class="bg-ivory-light border-2 border-gold rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeGithubModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-crimson/10 text-crimson hover:bg-crimson hover:text-ivory-light flex items-center justify-center transition">
+                ✕
+            </button>
+
+            <span class="inline-block px-3 py-1 rounded-full bg-gold/20 text-crimson text-xs font-semibold uppercase tracking-wider mb-2">
+                Quick Setup Guide for Siddharth
+            </span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-crimson mb-4">
+                How to Host on GitHub Pages &amp; Share on WhatsApp
+            </h3>
+
+            <div class="space-y-4 text-xs sm:text-sm text-crimson/85 leading-relaxed">
+                <div class="p-3.5 rounded-2xl bg-gold/10 border border-gold/30">
+                    <p class="font-semibold text-crimson mb-1">1. Upload Your 2 Couple Photos Alongside <code class="font-mono">index.html</code></p>
+                    <p>Save your two uploaded couple photos with the exact filenames <code class="px-1.5 py-0.5 bg-ivory rounded font-mono font-semibold text-crimson">image_3a9cfa.jpg</code> and <code class="px-1.5 py-0.5 bg-ivory rounded font-mono font-semibold text-crimson">image_3a9cf6.jpg</code> (or change their filenames inside <code class="px-1.5 py-0.5 bg-ivory rounded font-mono text-crimson">WEDDING_CONFIG.photos</code>). Upload both photo files into the <strong>same GitHub repository folder</strong> as <code class="font-mono font-semibold">index.html</code>.</p>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-gold/10 border border-gold/30">
+                    <p class="font-semibold text-crimson mb-1">2. Hide the Admin Helper Button Before Publishing</p>
+                    <p>Open <code class="px-1.5 py-0.5 bg-ivory rounded font-mono text-crimson">index.html</code> and set <code class="px-1.5 py-0.5 bg-ivory rounded font-mono text-crimson">showGithubHelperButton: false</code> inside <code class="px-1.5 py-0.5 bg-ivory rounded font-mono text-crimson">WEDDING_CONFIG</code> so your guests only see the clean wedding invitation.</p>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-gold/10 border border-gold/30">
+                    <p class="font-semibold text-crimson mb-1">3. Upload to GitHub &amp; Enable GitHub Pages</p>
+                    <ol class="list-decimal list-inside space-y-1">
+                        <li>Create a free public repository on <a href="https://github.com/new" target="_blank" rel="noopener noreferrer" class="underline font-semibold">github.com/new</a> (e.g., <code class="font-mono">sidvya-wedding</code>).</li>
+                        <li>Click <strong>Add file → Upload files</strong> and upload <code class="font-mono font-semibold">index.html</code>, <code class="font-mono font-semibold">image_3a9cfa.jpg</code>, and <code class="font-mono font-semibold">image_3a9cf6.jpg</code>.</li>
+                        <li>Go to <strong>Settings → Pages</strong>, select the <code class="font-mono">main</code> branch, and click <strong>Save</strong>. Your live link will be ready in ~60 seconds!</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="mt-6 flex justify-end">
+                <button onclick="closeGithubModal()" class="px-6 py-2.5 rounded-full bg-crimson text-ivory-light text-xs sm:text-sm font-medium hover:bg-crimson-dark transition">
+                    Got It, Thanks!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         CONFIGURATION & INTERACTIVE JAVASCRIPT
+    ====================================================================== -->
+    <script>
+        /* ===================================================================
+           1. EASY-TO-EDIT WEDDING CONFIGURATION (Edit all details here!)
+        =================================================================== */
+        const WEDDING_CONFIG = {
+            groomName: "Siddharth",
+            brideName: "Divya",
+            invocation: "॥ श्री गणेशाय नमः ॥",
+            hindiSubtitle: "✨ शुभ विवाह समारोह • मंगल परिणय ✨",
+            blessingLine: "Together with their families, joyfully invite you to celebrate the auspicious wedding of",
+            familyLine: "Seek your blessings and gracious presence as we unite in marriage and begin our forever journey together.",
+            hashtag: "#sidvya",
+
+            // Primary Wedding Muhurat / Jaimala Date & Time (ISO 8601 in IST +05:30)
+            weddingDateISO: "2026-12-04T20:00:00+05:30",
+            displayDate: "Friday, 4th December 2026 • 8:00 PM",
+            
+            // Main Venue Details
+            venueName: "CHARANS CLUB AND RESORT",
+            venueAddress: "Opposite All India Radio, Ayodhya Marg, Matiyari, Chinhat, Lucknow, Uttar Pradesh 226028",
+            googleMapsUrl: "https://maps.app.goo.gl/4KtfPdzznq7EtVG68",
+
+            // Set to false before uploading to GitHub so guests don't see the Admin Guide button
+            showGithubHelperButton: true,
+
+            // Uploaded Couple Portraits (Place image_3a9cfa.jpg and image_3a9cf6.jpg in the same folder as index.html)
+            photos: [
+                {
+                    src: "image_3a9cfa.jpg",
+                    hindiCaption: "॥ प्रथम नज़र का जादू ॥",
+                    caption: "Lost in each other's eyes — Siddharth & Divya",
+                    badge: "#sidvya • Forever Begins"
+                },
+                {
+                    src: "image_3a9cf6.jpg",
+                    hindiCaption: "॥ दो दिल, एक धड़कन ॥",
+                    caption: "In your arms, I found my home and my forever peace",
+                    badge: "#sidvya • Together Always"
+                }
+            ],
+
+            // Wedding Ceremonies (Haldi on 3rd Dec at 9:00 PM, Jaimala & Shubh Vivah on 4th Dec at 8:00 PM)
+            events: [
+                {
+                    title: "Haldi Ceremony",
+                    hindiTitle: "हल्दी समारोह",
+                    subtitle: "Auspicious Turmeric Blessings, Laughter & Marigold Glow",
+                    date: "Thursday, 3rd December 2026",
+                    time: "9:00 PM Onwards",
+                    venue: "CHARANS CLUB AND RESORT",
+                    address: "Charans Club and Resort, Chinhat, Lucknow",
+                    mapUrl: "https://maps.app.goo.gl/4KtfPdzznq7EtVG68",
+                    accentColor: "from-yellow-400/35 to-amber-500/15",
+                    badgeText: "3rd Dec • 9:00 PM",
+                    iconSvg: `<svg class="w-7 h-7 text-amber-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 16.95l-1.414 1.414m12.728 0l-1.414-1.414M7.05 7.05L5.636 5.636M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>`
+                },
+                {
+                    title: "Jaimala Ceremony",
+                    hindiTitle: "जयमाला समारोह",
+                    subtitle: "Royal Welcome & Exchange of Floral Garlands",
+                    date: "Friday, 4th December 2026",
+                    time: "8:00 PM Onwards",
+                    venue: "CHARANS CLUB AND RESORT",
+                    address: "Grand Lawn, Charans Club and Resort",
+                    mapUrl: "https://maps.app.goo.gl/4KtfPdzznq7EtVG68",
+                    accentColor: "from-amber-600/20 to-crimson/10",
+                    badgeText: "4th Dec • 8:00 PM",
+                    iconSvg: `<svg class="w-7 h-7 text-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.5 3.5 5 6 5 9.5a5 5 0 11-10 0C7 9 9.5 6.5 12 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M5 19c2 1.5 4.5 2 7 2s5-.5 7-2"/></svg>`
+                },
+                {
+                    title: "Shubh Vivah (Marriage)",
+                    hindiTitle: "शुभ विवाह एवं सात फेरे",
+                    subtitle: "Sacred Vedic Vows & Auspicious Pheras",
+                    date: "Friday, 4th December 2026",
+                    time: "Following Jaimala",
+                    venue: "CHARANS CLUB AND RESORT",
+                    address: "Wedding Mandap, Charans Club and Resort",
+                    mapUrl: "https://maps.app.goo.gl/4KtfPdzznq7EtVG68",
+                    accentColor: "from-crimson/20 to-amber-500/15",
+                    badgeText: "4th Dec • Auspicious Muhurat",
+                    iconSvg: `<svg class="w-7 h-7 text-crimson" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>`
+                }
+            ]
+        };
+
+        /* ===================================================================
+           2. RENDER CONFIGURATION INTO DOM
+        =================================================================== */
+        function initializeInvitation() {
+            document.getElementById('groom-name-hero').textContent = WEDDING_CONFIG.groomName;
+            document.getElementById('bride-name-hero').textContent = WEDDING_CONFIG.brideName;
+            document.getElementById('hero-invocation').textContent = WEDDING_CONFIG.invocation;
+            const hindiSubEl = document.getElementById('hero-hindi-subtitle');
+            if (hindiSubEl && WEDDING_CONFIG.hindiSubtitle) {
+                hindiSubEl.textContent = WEDDING_CONFIG.hindiSubtitle;
+            }
+            document.getElementById('hero-Blessing').textContent = WEDDING_CONFIG.blessingLine;
+            document.getElementById('family-line-hero').textContent = WEDDING_CONFIG.familyLine;
+            document.getElementById('hero-date-display').textContent = WEDDING_CONFIG.displayDate;
+            document.getElementById('hero-city-display').textContent = WEDDING_CONFIG.venueName;
+            document.getElementById('hero-venue-link').href = WEDDING_CONFIG.googleMapsUrl;
+            document.getElementById('hero-directions-btn').href = WEDDING_CONFIG.googleMapsUrl;
+            document.getElementById('hero-hashtag-badge').textContent = WEDDING_CONFIG.hashtag;
+
+            document.getElementById('main-venue-title').textContent = WEDDING_CONFIG.venueName;
+            document.getElementById('main-venue-address').textContent = WEDDING_CONFIG.venueAddress;
+            document.getElementById('main-venue-map-btn').href = WEDDING_CONFIG.googleMapsUrl;
+            document.getElementById('wedding-hashtag').textContent = WEDDING_CONFIG.hashtag;
+            document.getElementById('footer-date-location').textContent = `3rd & 4th December 2026 • ${WEDDING_CONFIG.venueName}`;
+
+            // Hide GitHub helper button & photo preview bar if disabled in config
+            if (!WEDDING_CONFIG.showGithubHelperButton) {
+                const pill = document.getElementById('github-helper-pill');
+                if (pill) pill.style.display = 'none';
+                const previewHelper = document.getElementById('photo-preview-helper');
+                if (previewHelper) previewHelper.style.display = 'none';
+            }
+
+            // Set up Google Calendar direct link
+            setupGoogleCalendarLink();
+
+            // Render Couple Portrait Gallery Cards
+            renderPhotoGallery();
+
+            // Render Ceremony Cards (with Tillana font for Hindi titles)
+            const eventsGrid = document.getElementById('events-grid');
+            eventsGrid.innerHTML = WEDDING_CONFIG.events.map(ev => `
+                <article class="royal-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-36 h-36 bg-gradient-to-bl ${ev.accentColor} rounded-bl-full pointer-events-none"></div>
+                    
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-14 h-14 rounded-2xl bg-gold/15 border border-gold/40 flex items-center justify-center group-hover:scale-105 transition">
+                                ${ev.iconSvg}
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-crimson/10 border border-gold/40 text-crimson text-xs font-semibold tracking-wide">
+                                ${ev.badgeText || ''}
+                            </span>
+                        </div>
+
+                        <p class="font-hindi text-xl sm:text-2xl font-bold text-gold-dark mb-1">${ev.hindiTitle || ''}</p>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-crimson mb-1">${ev.title}</h3>
+                        <p class="font-serif italic text-sm sm:text-base text-crimson/75 mb-5">${ev.subtitle}</p>
+
+                        <div class="space-y-2.5 pt-4 border-t border-gold/25 text-xs sm:text-sm text-crimson/85">
+                            <div class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-gold-dark shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                <span class="font-semibold">${ev.date}</span>
+                            </div>
+
+                            <div class="flex items-center gap-2.5">
+                                <svg class="w-4 h-4 text-gold-dark shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="font-medium text-crimson">${ev.time}</span>
+                            </div>
+
+                            <div class="flex items-start gap-2.5">
+                                <svg class="w-4 h-4 text-gold-dark shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                                <div>
+                                    <div class="font-semibold text-crimson">${ev.venue}</div>
+                                    <div class="text-xs text-crimson/70">${ev.address}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gold/20 flex items-center justify-between">
+                        <a href="${ev.mapUrl}" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-crimson hover:text-gold-dark transition">
+                            <span>View on Google Maps</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                        <span class="font-hindi text-xs text-gold-dark font-semibold">#sidvya</span>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        /* ===================================================================
+           2B. COUPLE PHOTO GALLERY & LIGHTBOX FUNCTIONS
+        =================================================================== */
+        function renderPhotoGallery() {
+            const galleryGrid = document.getElementById('gallery-grid');
+            if (!galleryGrid || !WEDDING_CONFIG.photos) return;
+
+            const heroImg = document.getElementById('hero-couple-photo');
+            if (heroImg && WEDDING_CONFIG.photos[0]) {
+                heroImg.src = WEDDING_CONFIG.photos[0].src;
+            }
+
+            galleryGrid.innerHTML = WEDDING_CONFIG.photos.map((photo, index) => `
+                <div onclick="openPhotoLightbox(${index})"
+                     class="royal-card rounded-3xl p-4 sm:p-5 border-2 border-gold/45 cursor-pointer group relative overflow-hidden">
+                    <div class="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-crimson-dark border border-gold/40 shadow-inner">
+                        <img src="${photo.src}" alt="${photo.caption}"
+                             onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='https://placehold.co/720x960/2B0912/E6C762?text=Siddharth+%26+Divya%0A(${encodeURIComponent(photo.src)})';}"
+                             class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-crimson-dark/80 via-transparent to-transparent opacity-85 group-hover:opacity-70 transition"></div>
+                        <div class="absolute top-3 right-3 px-3 py-1 rounded-full bg-crimson-dark/75 backdrop-blur-sm border border-gold/50 text-gold-light text-[11px] font-medium">
+                            ${photo.badge}
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 text-left text-ivory-light">
+                            <p class="font-hindi text-lg sm:text-xl font-bold text-gold-light drop-shadow">${photo.hindiCaption}</p>
+                            <p class="font-serif italic text-sm sm:text-base text-ivory/95">${photo.caption}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openPhotoLightbox(index) {
+            const photo = WEDDING_CONFIG.photos[index];
+            if (!photo) return;
+            const modal = document.getElementById('photo-lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.dataset.fallback = '';
+            img.onerror = function() {
+                if (!this.dataset.fallback) {
+                    this.dataset.fallback = '1';
+                    this.src = `https://placehold.co/720x960/2B0912/E6C762?text=Siddharth+%26+Divya%0A(${encodeURIComponent(photo.src)})`;
+                }
+            };
+            img.src = photo.src;
+            document.getElementById('lightbox-hindi').textContent = photo.hindiCaption;
+            document.getElementById('lightbox-caption').textContent = photo.caption;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closePhotoLightbox() {
+            const modal = document.getElementById('photo-lightbox');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function previewLocalPhotos(event) {
+            const files = Array.from(event.target.files || []);
+            if (!files.length) return;
+            files.slice(0, 2).forEach((file, idx) => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    if (WEDDING_CONFIG.photos[idx]) {
+                        WEDDING_CONFIG.photos[idx].src = e.target.result;
+                    }
+                    renderPhotoGallery();
+                };
+                reader.readAsDataURL(file);
+            });
+            showToast("Couple photos loaded into preview!");
+        }
+
+        /* ===================================================================
+           3. LIVE COUNTDOWN TIMER (To 4th Dec 2026, 8:00 PM IST)
+        =================================================================== */
+        function startCountdown() {
+            const targetTime = new Date(WEDDING_CONFIG.weddingDateISO).getTime();
+
+            function updateTimer() {
+                const now = new Date().getTime();
+                const diff = targetTime - now;
+
+                if (diff <= 0) {
+                    document.getElementById('cd-days').textContent = "00";
+                    document.getElementById('cd-hours').textContent = "00";
+                    document.getElementById('cd-mins').textContent = "00";
+                    document.getElementById('cd-secs').textContent = "00";
+                    document.getElementById('countdown-status-msg').textContent = "✨ शुभ विवाह! Today we celebrate Siddharth & Divya's union! ✨";
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+                document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+                document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        /* ===================================================================
+           4. GOOGLE CALENDAR & .ICS FILE GENERATOR
+        =================================================================== */
+        function setupGoogleCalendarLink() {
+            const title = encodeURIComponent(`${WEDDING_CONFIG.groomName} Weds ${WEDDING_CONFIG.brideName} — Wedding Ceremony (${WEDDING_CONFIG.hashtag})`);
+            // Dec 4, 2026 20:00 IST is Dec 4, 2026 14:30 UTC
+            const dates = "20261204T143000Z/20261204T203000Z";
+            const details = encodeURIComponent(`Join us to celebrate the auspicious Jaimala (8:00 PM) and Shubh Vivah of ${WEDDING_CONFIG.groomName} & ${WEDDING_CONFIG.brideName}!\n\nVenue: ${WEDDING_CONFIG.venueName}\nGoogle Maps: ${WEDDING_CONFIG.googleMapsUrl}\nHashtag: ${WEDDING_CONFIG.hashtag}`);
+            const location = encodeURIComponent(`${WEDDING_CONFIG.venueName}, ${WEDDING_CONFIG.venueAddress}`);
+
+            const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
+            document.getElementById('google-cal-btn').href = calUrl;
+        }
+
+        function downloadICSFile() {
+            const icsContent = [
+                "BEGIN:VCALENDAR",
+                "VERSION:2.0",
+                "PRODID:-//Siddharth Weds Divya//Wedding Invitation//EN",
+                "BEGIN:VEVENT",
+                "UID:sidvya-wedding-20261204@github.io",
+                "DTSTAMP:20260101T000000Z",
+                "DTSTART:20261204T143000Z",
+                "DTEND:20261204T203000Z",
+                `SUMMARY:${WEDDING_CONFIG.groomName} Weds ${WEDDING_CONFIG.brideName} (${WEDDING_CONFIG.hashtag})`,
+                `DESCRIPTION:Join us for the Jaimala (8:00 PM) and Marriage ceremony of ${WEDDING_CONFIG.groomName} & ${WEDDING_CONFIG.brideName} at ${WEDDING_CONFIG.venueName}. Maps: ${WEDDING_CONFIG.googleMapsUrl}`,
+                `LOCATION:${WEDDING_CONFIG.venueName}, ${WEDDING_CONFIG.venueAddress}`,
+                "END:VEVENT",
+                "END:VCALENDAR"
+            ].join("\r\n");
+
+            const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Siddharth-Weds-Divya-4Dec2026.ics";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast("Calendar invite (.ics) downloaded!");
+        }
+
+        /* ===================================================================
+           5. SHARE INVITATION & COPY HASHTAG HELPERS
+        =================================================================== */
+        function copyTextFallback(text) {
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand("copy");
+            } catch (err) {
+                console.error("Copy failed", err);
+            }
+            document.body.removeChild(ta);
+        }
+
+        function copyHashtag() {
+            copyTextFallback(WEDDING_CONFIG.hashtag);
+            showToast(`Copied wedding hashtag ${WEDDING_CONFIG.hashtag}!`);
+        }
+
+        function shareInvitation() {
+            const shareTitle = `${WEDDING_CONFIG.groomName} Weds ${WEDDING_CONFIG.brideName} — Wedding Invitation`;
+            const shareText = `✨ You are cordially invited to the wedding of ${WEDDING_CONFIG.groomName} & ${WEDDING_CONFIG.brideName} (${WEDDING_CONFIG.hashtag}) on Friday, 4th December 2026 (Jaimala 8:00 PM) at ${WEDDING_CONFIG.venueName}!\n📍 Venue Map: ${WEDDING_CONFIG.googleMapsUrl}`;
+            const shareUrl = window.location.href;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: shareTitle,
+                    text: shareText,
+                    url: shareUrl
+                }).catch(() => {});
+            } else {
+                const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText + "\n🔗 Invite: " + shareUrl)}`;
+                window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+            }
+        }
+
+        function showToast(message) {
+            const banner = document.getElementById('toast-banner');
+            const msgEl = document.getElementById('toast-message');
+            msgEl.textContent = message;
+            banner.classList.remove('opacity-0', 'translate-y-[-10px]');
+            banner.classList.add('opacity-100', 'translate-y-0');
+
+            clearTimeout(window._toastTimer);
+            window._toastTimer = setTimeout(() => {
+                banner.classList.remove('opacity-100', 'translate-y-0');
+                banner.classList.add('opacity-0', 'translate-y-[-10px]');
+            }, 3000);
+        }
+
+        /* ===================================================================
+           6. GITHUB SETUP MODAL CONTROLS
+        =================================================================== */
+        function openGithubModal() {
+            const modal = document.getElementById('github-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeGithubModal() {
+            const modal = document.getElementById('github-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function dismissGithubPill() {
+            const pill = document.getElementById('github-helper-pill');
+            if (pill) pill.style.display = 'none';
+        }
+
+        /* ===================================================================
+           7. WEB AUDIO SYNTHESIZED FESTIVE SANTOOR / HARP CHIMES (No external MP3 needed)
+        =================================================================== */
+        let audioCtx = null;
+        let isPlayingMusic = false;
+        let chimeInterval = null;
+
+        // Auspicious Yaman-inspired pentatonic/heptatonic frequencies (Hz)
+        const AUSPICIOUS_NOTES = [261.63, 293.66, 329.63, 370.00, 392.00, 440.00, 493.88, 523.25, 587.33, 659.25];
+        let noteIdx = 0;
+
+        function playPluckNote(freq) {
+            if (!audioCtx) return;
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = "triangle";
+            osc.frequency.setValueAtTime(freq, now);
+
+            gain.gain.setValueAtTime(0.001, now);
+            gain.gain.linearRampToValueAtTime(0.07, now + 0.05);
+            gain.gain.exponentialRampToValueAtTime(0.0008, now + 2.2);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start(now);
+            osc.stop(now + 2.3);
+        }
+
+        function toggleAmbientMusic() {
+            const bars = document.getElementById('music-bars');
+            const label = document.getElementById('music-label');
+
+            if (!isPlayingMusic) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (!audioCtx) {
+                    audioCtx = new AudioContextClass();
+                }
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                isPlayingMusic = true;
+                bars.classList.add('eq-playing');
+                label.textContent = "Pause Melody";
+
+                playPluckNote(AUSPICIOUS_NOTES[0]);
+                chimeInterval = setInterval(() => {
+                    if (!isPlayingMusic) return;
+                    const pattern = [0, 2, 4, 6, 7, 9, 7, 4, 2, 1];
+                    const freq = AUSPICIOUS_NOTES[pattern[noteIdx % pattern.length]];
+                    playPluckNote(freq);
+                    noteIdx++;
+                }, 650);
+            } else {
+                isPlayingMusic = false;
+                clearInterval(chimeInterval);
+                bars.classList.remove('eq-playing');
+                label.textContent = "Play Melody";
+            }
+        }
+
+        /* ===================================================================
+           8. FLOATING MARIGOLD & ROSE GOLD PETALS CANVAS
+        =================================================================== */
+        function initPetalsCanvas() {
+            const canvas = document.getElementById('petal-canvas');
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = window.innerWidth;
+            let height = canvas.height = window.innerHeight;
+
+            window.addEventListener('resize', () => {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            });
+
+            const petalCount = window.innerWidth < 640 ? 14 : 24;
+            const colors = [
+                'rgba(212, 175, 55, 0.25)',
+                'rgba(197, 155, 39, 0.22)',
+                'rgba(107, 18, 36, 0.14)',
+                'rgba(230, 140, 58, 0.22)'
+            ];
+
+            const petals = Array.from({ length: petalCount }, () => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                r: 4 + Math.random() * 6,
+                vy: 0.35 + Math.random() * 0.65,
+                vx: -0.3 + Math.random() * 0.6,
+                angle: Math.random() * Math.PI * 2,
+                spin: (Math.random() - 0.5) * 0.02,
+                color: colors[Math.floor(Math.random() * colors.length)]
+            }));
+
+            function draw() {
+                ctx.clearRect(0, 0, width, height);
+                for (const p of petals) {
+                    p.y += p.vy;
+                    p.x += p.vx + Math.sin(p.angle) * 0.25;
+                    p.angle += p.spin;
+
+                    if (p.y > height + 20) {
+                        p.y = -15;
+                        p.x = Math.random() * width;
+                    }
+                    if (p.x > width + 20) p.x = -15;
+                    if (p.x < -20) p.x = width + 15;
+
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.angle);
+                    ctx.fillStyle = p.color;
+                    ctx.beginPath();
+                    ctx.ellipse(0, 0, p.r, p.r * 0.6, 0, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+                requestAnimationFrame(draw);
+            }
+
+            draw();
+        }
+
+        // Start everything when window loads
+        window.onload = function () {
+            initializeInvitation();
+            startCountdown();
+            initPetalsCanvas();
+        };
+    </script>
+</body>
+</html>
