@@ -134,11 +134,41 @@
 </head>
 <body class="mandala-bg antialiased selection:bg-crimson selection:text-ivory-light">
 
+    <!-- =====================================================================
+         ROYAL WELCOME ENVELOPE OVERLAY (Unlocks Instant Music on First Tap)
+    ====================================================================== -->
+    <div id="welcome-overlay" onclick="enterInvitation()" class="fixed inset-0 z-50 bg-crimson-dark/95 backdrop-blur-md flex flex-col items-center justify-center p-4 sm:p-6 text-center cursor-pointer transition-opacity duration-700">
+        <div class="relative max-w-md w-full royal-card rounded-t-[140px] rounded-b-3xl p-8 sm:p-10 border-2 border-gold shadow-2xl overflow-hidden">
+            <!-- Subtle Background Glow -->
+            <div class="w-12 h-12 mx-auto rounded-full bg-crimson/10 border border-gold/50 flex items-center justify-center mb-3 text-gold-dark">
+                <svg class="w-7 h-7" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M16 4C16 4 12 10 12 14C12 16.2 13.8 18 16 18C18.2 18 20 16.2 20 14C20 10 16 4 16 4ZM8 14C8 14 5 17 6 21C7 24 11 25 14 25.5C11 23 10 19 8 14ZM24 14C22 19 21 23 18 25.5C21 25 25 24 26 21C27 17 24 14 24 14ZM6 26C10 28.5 22 28.5 26 26C23 26 9 26 6 26Z"/>
+                </svg>
+            </div>
+            <p class="font-hindi text-lg sm:text-xl text-crimson font-bold">॥ श्री गणेशाय नमः ॥</p>
+            <p class="font-hindi text-xs sm:text-sm text-gold-dark font-semibold mt-0.5 mb-4">✨ सस्नेह निमंत्रण ✨</p>
+            
+            <h2 class="font-script text-5xl sm:text-6xl text-crimson leading-tight py-1">Siddharth</h2>
+            <p class="font-script text-3xl gold-gradient-text my-0.5">Weds</p>
+            <h2 class="font-script text-5xl sm:text-6xl text-crimson leading-tight py-1">Divya</h2>
+
+            <p class="font-serif italic text-sm sm:text-base text-crimson/80 mt-3 mb-6">
+                Friday, 4th December 2026 • Lucknow
+            </p>
+
+            <button type="button" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-crimson hover:bg-crimson-dark text-gold-pale border border-gold font-medium text-sm shadow-lg hover:scale-105 transition">
+                <span>✨ Tap to Open Invitation ✨</span>
+            </button>
+            <p class="text-[11px] text-crimson/60 mt-3 font-medium">🎵 Opens with wedding melody</p>
+        </div>
+    </div>
+
     <!-- Subtle Floating Marigold/Rose Gold Petals Canvas -->
     <canvas id="petal-canvas"></canvas>
 
     <!-- Hidden YouTube Audio Player Container (Streams Ishq Sufiyana) -->
-    <div id="yt-audio-container" class="fixed -left-[9999px] -top-[9999px] w-1 h-1 overflow-hidden pointer-events-none opacity-0" aria-hidden="true">
+    <!-- Kept 200x200 off-screen so mobile browsers do not throttle 1x1 players -->
+    <div id="yt-audio-container" class="fixed -left-[9999px] -top-[9999px] w-[200px] h-[200px] overflow-hidden pointer-events-none opacity-0" aria-hidden="true">
         <div id="yt-player"></div>
     </div>
 
@@ -588,7 +618,7 @@
             youtubeVideoId: "5RT6QMKJTjQ",
             youtubeStartSeconds: 1,
 
-            // Uploaded Couple Portraits (Save your two photos as photo1.jpg and photo2.jpg in the same folder as index.html)
+            // Uploaded Couple Portraits
             photos: [
                 {
                     src: "photo_1.jpeg",
@@ -604,8 +634,8 @@
                     caption: "Hand in hand, stepping into our happily ever after",
                     badge: "#sidvya • Forever & Always"
                 },
-                 {
-                   src: "photo1.jpg",
+                {
+                    src: "photo1.jpg",
                     altSrc: "image_3a9cfa.jpg",
                     hindiCaption: "॥ प्रथम नज़र का जादू ॥",
                     caption: "Lost in each other's eyes — Siddharth & Divya",
@@ -950,12 +980,13 @@
 
         /* ===================================================================
            6. YOUTUBE AUDIO STREAM PLAYER ("Ishq Sufiyana" - 5RT6QMKJTjQ)
-              With Web Audio fallback if opened offline or embed-restricted
+              With Royal Welcome Overlay & First-Interaction Unlock
         =================================================================== */
         let ytPlayer = null;
         let ytReady = false;
         let ytFailed = false;
         let isPlayingMusic = false;
+        let wantAutoPlay = true;
         let audioCtx = null;
         let chimeInterval = null;
 
@@ -969,15 +1000,15 @@
 
         window.onYouTubeIframeAPIReady = function () {
             ytPlayer = new YT.Player('yt-player', {
-                height: '1',
-                width: '1',
+                height: '200',
+                width: '200',
                 videoId: WEDDING_CONFIG.youtubeVideoId,
                 playerVars: {
-                    autoplay: 0,
+                    autoplay: 1,
                     controls: 0,
                     loop: 1,
                     playlist: WEDDING_CONFIG.youtubeVideoId,
-                    start: WEDDING_CONFIG.youtubeStartSeconds || 22,
+                    start: WEDDING_CONFIG.youtubeStartSeconds || 1,
                     playsinline: 1,
                     rel: 0
                 },
@@ -985,12 +1016,19 @@
                     onReady: function (event) {
                         ytReady = true;
                         event.target.setVolume(85);
+                        if (wantAutoPlay) {
+                            event.target.playVideo();
+                        }
                     },
                     onStateChange: function (event) {
                         const bars = document.getElementById('music-bars');
                         const label = document.getElementById('music-label');
                         if (event.data === YT.PlayerState.PLAYING) {
                             isPlayingMusic = true;
+                            wantAutoPlay = false;
+                            // Stop fallback chime if YouTube started playing
+                            clearInterval(chimeInterval);
+                            chimeInterval = null;
                             bars.classList.add('eq-playing');
                             label.textContent = "Pause Melody";
                         } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
@@ -1003,13 +1041,43 @@
                     },
                     onError: function () {
                         ytFailed = true;
-                        if (isPlayingMusic) {
+                        if (isPlayingMusic || wantAutoPlay) {
                             startFallbackMelody();
                         }
                     }
                 }
             });
         };
+
+        // Triggered when guest taps the Royal Welcome Envelope Overlay
+        function enterInvitation() {
+            const overlay = document.getElementById('welcome-overlay');
+            if (overlay) {
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => overlay.remove(), 700);
+            }
+            if (!isPlayingMusic) {
+                toggleAmbientMusic();
+            }
+        }
+
+        // Also unlock audio on any first tap/click/key just in case
+        function unlockAudioOnInteraction() {
+            if (!isPlayingMusic && wantAutoPlay) {
+                if (ytReady && ytPlayer && !ytFailed && typeof ytPlayer.playVideo === 'function') {
+                    ytPlayer.playVideo();
+                } else if (ytFailed) {
+                    isPlayingMusic = true;
+                    document.getElementById('music-bars').classList.add('eq-playing');
+                    document.getElementById('music-label').textContent = "Pause Melody";
+                    startFallbackMelody();
+                }
+            }
+        }
+
+        ['click', 'touchstart', 'keydown'].forEach(evt => {
+            document.addEventListener(evt, unlockAudioOnInteraction, { once: true, passive: true });
+        });
 
         // Fallback soft instrumental melody if opened directly via file:// or restricted network
         const AUSPICIOUS_NOTES = [261.63, 293.66, 329.63, 370.00, 392.00, 440.00, 493.88, 523.25, 587.33, 659.25];
@@ -1057,16 +1125,18 @@
 
             if (!isPlayingMusic) {
                 isPlayingMusic = true;
+                wantAutoPlay = true;
                 bars.classList.add('eq-playing');
                 label.textContent = "Pause Melody";
 
                 if (ytReady && ytPlayer && !ytFailed && typeof ytPlayer.playVideo === 'function') {
                     ytPlayer.playVideo();
-                } else {
+                } else if (ytFailed) {
                     startFallbackMelody();
                 }
             } else {
                 isPlayingMusic = false;
+                wantAutoPlay = false;
                 bars.classList.remove('eq-playing');
                 label.textContent = "Play Melody";
 
@@ -1145,7 +1215,6 @@
             initializeInvitation();
             startCountdown();
             initPetalsCanvas();
-            toggleAmbientMusic();
         };
     </script>
 </body>
